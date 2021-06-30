@@ -29,7 +29,7 @@ from bokeh.models import Range1d
 tools = 'box_select,hover,pan,reset,help'
 
 
-header = Div(text=open("description.html").read(), sizing_mode="stretch_both")
+#header = Div(text=open("description.html").read(), sizing_mode="stretch_both")
 
 
 def yearmean(ds):
@@ -202,7 +202,8 @@ timeseries_climate = column(plot['tas'], plot['tos'], plot['nino34'])
 for v in ['co2_emissions','fgco2','nino34']:
     plot[v].xaxis.axis_label = 'Time'
 
-layout = column(header, controls, row(timeseries_co2, timeseries_carbon_sinks,timeseries_climate))
+# first was header
+layout = column( controls, row(timeseries_co2, timeseries_carbon_sinks,timeseries_climate))
 
 curdoc().add_root(layout)
 curdoc().title = "4C explorable explanations"
