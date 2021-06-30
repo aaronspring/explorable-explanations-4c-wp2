@@ -1,2 +1,2 @@
 heroku ps:scale web=1
-web: bokeh serve — port=$PORT — allow-websocket-origin=explorable-explanations-4c-wp2.herokuapp.com — address=0.0.0.0 — use-xheaders main_multiple_lines.py
+web: bokeh serve -- port=$PORT -- allow-websocket-origin=explorable-explanations-4c-wp2.herokuapp.com -- address=0.0.0.0 -- use-xheaders main_multiple_lines.py
